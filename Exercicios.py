@@ -228,6 +228,11 @@ else:
 
 
 
+
+
+
+
+
 #Desafio
 #Desafio
 #Desafio
@@ -276,6 +281,8 @@ else:
 
 
 #669
+
+
 
 
 
@@ -396,6 +403,15 @@ else:
     else:
         print (f'{num} é primo')
     
+
+
+
+
+
+
+
+
+
 #Desafio
 #Desafio
 #Desafio
@@ -433,6 +449,15 @@ while True:
     else:
         print('Opção inválida, encerrando programa.')
         break
+
+
+
+
+
+
+
+
+
 
 
 
@@ -510,6 +535,14 @@ for i in range (1 ,51):
         soma += i
         print(i)
     print(f'sua soma é {soma}')
+
+
+
+
+
+
+
+
 
 
 
@@ -699,6 +732,16 @@ print(carrinho)  # Saída: []
 nomes = ['Ana', 'Carlos', 'Beatriz']
 nomes.reverse()
 print(nomes)  # Saída: ['Beatriz', 'Carlos', 'Ana']
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -981,6 +1024,15 @@ while True:
         print("Opção inválida. Tente novamente.")
 
 
+
+
+
+
+
+
+
+
+
 #Tupla
 #Tupla
 #Tupla
@@ -1055,4 +1107,194 @@ print(f'A latitude do {dados} o é: {latitude}')
 print(f'A longitude do {dados} é: {longitude}')
 
 
+#converter lista em tupla
+lista = [1,2,3,4,5]
+tupla = tuple(lista) #convertendo lista para tupla
+print('Tupla convertida:', tupla)
 
+
+#convertedo tupla em lista
+tupla = (1,2,3,4,5)
+lista = list(tupla) #convertendo  tupla para lista
+print('Lista conveertida:', lista)
+
+
+#ciar uma tupla com 8 nomes, converter em lista, criar estrutura de repetição pra digitar nomes  ,para continuar ou parada, voltar para tupla
+tupla = ('Ana', 'Bruno', 'Carlos', 'Diana', 'Eduardo', 'Fernanda', 'Gustavo', 'Helena')
+lista = list(tupla)
+print('A Tupla é:', tupla)
+print('Sua Tupla foi convertida para Lista')
+print('A lista é:', lista) 
+i=0 
+while True:
+    nome = (input(f'Digite o {i+1}° Nome: '))
+    lista.append(nome)
+    continuar = int(input('Digite 1 para continuar e 2 para parar : '))
+    if continuar == 1:
+        i += 1
+    elif continuar == 2:
+        print('A lista final é:', lista)
+        print('Convertendo a lista para tupla')
+        tupla = tuple(lista)
+        print('A Tupla final é:', tupla)
+        break
+    else:
+        print('Opção inválida, encerrando programa.')
+        break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #conjutos
+    #conjutos
+    #conjutos
+    #conjutos
+    #conjutos
+
+#criação de conjunto
+meu_conjunto = {1,2,3,4,5}
+#ou 
+meu_conjunto = set([1,2,3,4,5])
+
+#Conjunto Vazio: Para criar um conjunto vazio, é necessário usar a função set().
+#Usar {} cria  um dicionario vazio, não um conjunto vazio
+
+conjunto_vazio = set()
+
+#Acessando os elementos de um conjunto:
+#como os conjuntos são não ordenados, não podemos acessar os elementos diretamente por indice. Para iterar sobre os elementos de um conjunto, usamos loops, como o for:
+
+meu_conjunto = {1,2,3,4,5}
+for item in meu_conjunto:
+    print(item)
+
+#adicionando elemento
+meu_conjunto = {1,2,3,4,5}
+meu_conjunto.add(6)
+print(meu_conjunto) #saida {1,2,3,4,5,6}
+
+#removendo elementos (se o elemento não existir será gerado um erro)
+meu_conjunto = {1,2,3,4,5,6}
+meu_conjunto.remove(3)
+print(meu_conjunto) #saida {1,2,4,5,6}
+
+#use discard() para remover um elemento, mas sem gerar erro caso o elemento não exista
+#elemento não exista:
+meu_conjunto = {1,2,3,4,5}
+meu_conjunto.discard(10) #Não gera erro, mesmo que o 10 não esteja no conjunto
+print(meu_conjunto) #saida {1,2,3,4,5}
+
+
+#União de conjuntos
+conj1 = {1,2,3,4}
+conj2 = {3,4,5,6}
+print('primeiro conjunto', conj1)
+print('segundo conjunto', conj2)
+uniao = conj1.union(conj2)
+intersec = conj1.intersection(conj2)
+difer= conj1.difference(conj2)
+difer_simetrica = conj1.symmetric_difference(conj2)
+print(uniao)
+print(intersec)
+print(difer)
+print(difer_simetrica)
+
+
+#Verificando se um elemento está no conjunto
+frutas = {'maçã', 'banana', 'laranja'}
+print('banana' in frutas) #Saída: True
+print('uva' in frutas) #Saída: False
+
+
+#Verificar se todos os elementos de A estão em B
+a = {1, 2}
+b = {1, 2, 3}
+print(a.issubset(b)) #Saída: True (A é subconjunto de B)
+
+
+
+
+
+
+
+#Dicionario
+#Dicionario
+#Dicionario
+#Dicionario
+#Dicionario
+#Dicionario
+#Dicionario
+
+#voce pode criar um dicionario usando chaves {} ou a função dict {}
+meu_dict = {'nome': 'joão', 'idade': 25, 'cidade': 'são paulo'}
+#usando a função dict
+meu_dict = dict(nome='joão', idade=25, cidade='são paulo')
+
+
+#acessando elemento
+meu_dict = dict(nome='joão', idade=25, cidade='são paulo')
+print(meu_dict['nome']) #Saída: João
+print(meu_dict['idade']) #Saída: 25
+print(meu_dict['cidade']) #Saída: São Paulo
+
+
+#adicionando ou alterando um valor
+meu_dict = dict(nome='joão', idade=25, cidade='são paulo')
+meu_dict['idade'] = 26 #modifica o valor da chave "idade"
+meu_dict['profissao'] = 'Engenheiro' #adiciona um novo par de chav-valor
+print(meu_dict)
+
+
+#removendo elementos de um Dicionario
+#Removendo uma chave com Del
+meu_dict = dict(nome='joão', idade=25, cidade='são paulo')
+del meu_dict['cidade']
+print(meu_dict) #Saída: {'nome': 'joão', 'idade': 25}
+
+
+#copiar um dicionario
+novo_dict = meu_dict.copy()
+
+
+#mesclar dois dicionarios
+dict1 = {'a': 1, 'b': 2}
+dict2 = {'c': 3, 'd': 4}
+dict1.update(dict2) 
+print(dict1) #dict1 agora é {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+
+
+#verificar se uma chave existe
+meu_dict = dict(nome='joão', idade=25, cidade='são paulo')
+if 'nome' in meu_dict:
+    print('nome está presente')
+
+
+#dicionario aninhado
+meu_dict = {
+    'pessoa1': {'nome': 'João', 'idade': 25},
+    'pessoa2': {'nome': 'Maria', 'idade': 30}
+}
+print(meu_dict['pessoa1']['nome']) #Saída: João
+
+
+#Iterando sobre um dicionario
+pessoa = {
+    'nome': 'Ana',
+    'idade': 30,
+    'cidade': 'Belo Horizonte'
+}
+
+for chave in pessoa(): #interar somente a chave aqui no retorno do valor
+    print(chave)
+for valor in pessoa.values():  #aqui ja retorna somente o valor pois usamos o .values()
+    print(valor)
